@@ -1,0 +1,88 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{Olausson2023,Ye2023,DeMoura2008}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:introduction}{{1}{1}{Introduction}{section.1}{}}
+\citation{DeMoura2008}
+\citation{Olausson2023}
+\citation{Ryu2025}
+\citation{Ye2023}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Summary of Contributions}{2}{subsection.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}\protected@file@percent }
+\newlabel{sec:related}{{2}{2}{Related Work}{section.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Neuro-Symbolic FOL Translation}{2}{subsection.2.1}\protected@file@percent }
+\citation{Wang2023}
+\citation{Gupta2022}
+\citation{Yin2019}
+\citation{StengelEskin2023}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces End-to-end pipeline: the input text is translated to K FOL candidates by an LLM, filtered by Z3 satisfiability checking, and the filtered ensemble is used for majority voting to produce the final answer.}}{3}{figure.1}\protected@file@percent }
+\newlabel{fig:architecture}{{1}{3}{End-to-end pipeline: the input text is translated to K FOL candidates by an LLM, filtered by Z3 satisfiability checking, and the filtered ensemble is used for majority voting to produce the final answer}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Ensemble Methods in Semantic Parsing}{3}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Uncertainty Estimation in Neuro-Symbolic Systems}{3}{subsection.2.3}\protected@file@percent }
+\citation{Gupta2022}
+\citation{Yin2019}
+\citation{Wang2023}
+\citation{StengelEskin2023}
+\citation{Ryu2025}
+\citation{Olausson2023}
+\citation{Ye2023}
+\citation{Ryu2025}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Novelty of Our Approach}{4}{subsection.2.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Comparison of related work along three dimensions: (a) generates ensembles of logical theories, (b) uses satisfiability filtering, and (c) performs weighted model counting for calibrated uncertainty. Our approach is the first to combine all three elements.}}{4}{table.1}\protected@file@percent }
+\newlabel{tab:novelty}{{1}{4}{Comparison of related work along three dimensions: (a) generates ensembles of logical theories, (b) uses satisfiability filtering, and (c) performs weighted model counting for calibrated uncertainty. Our approach is the first to combine all three elements}{table.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Comparison of related work along three dimensions: (a) generates ensembles of logical theories, (b) uses satisfiability filtering, and (c) performs weighted model counting for calibrated uncertainty. Our approach is the first to combine all three elements.}}{4}{figure.2}\protected@file@percent }
+\newlabel{fig:novelty_table}{{2}{4}{Comparison of related work along three dimensions: (a) generates ensembles of logical theories, (b) uses satisfiability filtering, and (c) performs weighted model counting for calibrated uncertainty. Our approach is the first to combine all three elements}{figure.2}{}}
+\citation{DeMoura2008}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methods}{5}{section.3}\protected@file@percent }
+\newlabel{sec:methods}{{3}{5}{Methods}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Problem Formulation}{5}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Top-K Ensemble Generation}{5}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Satisfiability Filtering}{5}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Answer Computation via Majority Voting}{6}{subsection.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Algorithm Summary}{6}{subsection.3.5}\protected@file@percent }
+\citation{Clark2021}
+\citation{Han2022}
+\citation{Sinha2019}
+\citation{Olausson2023}
+\citation{Ryu2025}
+\citation{Ye2023}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Implementation Details}{7}{subsection.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experimental Results}{7}{section.4}\protected@file@percent }
+\newlabel{sec:experiments}{{4}{7}{Experimental Results}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Datasets}{7}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Baselines}{7}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Evaluation Metrics}{7}{subsection.4.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Main results on 30 examples (10 per dataset). Our method achieves modest accuracy due to current implementation limitations.}}{8}{table.2}\protected@file@percent }
+\newlabel{tab:main_results}{{2}{8}{Main results on 30 examples (10 per dataset). Our method achieves modest accuracy due to current implementation limitations}{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Main Results}{8}{subsection.4.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Accuracy of our method vs. direct LLM baseline on three datasets (10 examples each). Our method matches the baseline on RuleTaker (50.0\%), falls below on FOLIO (40.0\% vs. 60.0\%), and exceeds on CLUTRR (20.0\% vs. 0.0\%).}}{8}{figure.3}\protected@file@percent }
+\newlabel{fig:accuracy}{{3}{8}{Accuracy of our method vs. direct LLM baseline on three datasets (10 examples each). Our method matches the baseline on RuleTaker (50.0\%), falls below on FOLIO (40.0\% vs. 60.0\%), and exceeds on CLUTRR (20.0\% vs. 0.0\%)}{figure.3}{}}
+\citation{StengelEskin2023}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Analysis of SAT Statistics}{9}{subsection.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Error Analysis}{9}{subsection.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{9}{section.5}\protected@file@percent }
+\newlabel{sec:discussion}{{5}{9}{Discussion}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Key Findings}{9}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Limitations}{10}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Future Work}{10}{subsection.5.3}\protected@file@percent }
+\bibstyle{plainnat}
+\bibdata{references}
+\bibcite{Clark2021}{{1}{2021}{{Clark et~al.}}{{Clark, Tafjord, and Richardson}}}
+\bibcite{Gupta2022}{{2}{2022}{{Gupta and Berant}}{{}}}
+\bibcite{Han2022}{{3}{2022}{{Han et~al.}}{{Han, Schoelkopf, Zhao, Qi, Riddell, Benson, Sun, Zubova, Chen, Kinney, and Durme}}}
+\bibcite{DeMoura2008}{{4}{2008}{{Moura and Bj{\o }rner}}{{}}}
+\bibcite{Olausson2023}{{5}{2023}{{Olausson et~al.}}{{Olausson, Gu, Lipkin, Zhang, Solar-Lezama, Tenenbaum, and Levy}}}
+\bibcite{Ryu2025}{{6}{2025}{{Ryu et~al.}}{{Ryu, Mayberry, and Clark}}}
+\bibcite{Sinha2019}{{7}{2019}{{Sinha et~al.}}{{Sinha, Sodhani, Dong, Pineau, and Hamilton}}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{11}{section.6}\protected@file@percent }
+\newlabel{sec:conclusion}{{6}{11}{Conclusion}{section.6}{}}
+\bibcite{StengelEskin2023}{{8}{2023}{{Stengel-Eskin and Durme}}{{}}}
+\bibcite{Wang2023}{{9}{2023}{{Wang et~al.}}{{Wang, Wei, Schuurmans, Le, and Zhou}}}
+\bibcite{Ye2023}{{10}{2023}{{Ye et~al.}}{{Ye, Luo, and Durrett}}}
+\bibcite{Yin2019}{{11}{2019}{{Yin and Neubig}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Per-Example Results}{12}{appendix.A}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Per-example results for all 30 examples.}}{13}{table.3}\protected@file@percent }
+\newlabel{tab:per_example}{{3}{13}{Per-example results for all 30 examples}{table.3}{}}
+\gdef \@abspage@last{13}

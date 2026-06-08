@@ -1,0 +1,93 @@
+\begin{thebibliography}{11}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Clark et~al.(2021)Clark, Tafjord, and Richardson]{Clark2021}
+Peter Clark, Oyvind Tafjord, and Kyle Richardson.
+\newblock Transforming question answering to zero-shot link prediction.
+\newblock \emph{arXiv preprint arXiv:2108.02654}, 2021.
+\newblock URL \url{https://arxiv.org/abs/2108.02654}.
+
+\bibitem[Gupta and Berant(2022)]{Gupta2022}
+Ankit Gupta and Jonathan Berant.
+\newblock Diverse top-k decoding for non-autoregressive semantic parsing via
+  intent conditioning.
+\newblock \emph{Google Research Technical Report}, 2022.
+\newblock URL \url{https://arxiv.org/abs/2211.04477}.
+
+\bibitem[Han et~al.(2022)Han, Schoelkopf, Zhao, Qi, Riddell, Benson, Sun,
+  Zubova, Chen, Kinney, and Durme]{Han2022}
+Simeng Han, Hailey Schoelkopf, Yilun Zhao, Zhenting Qi, Martin Riddell, Luke
+  Benson, Lucy Sun, Ekaterina Zubova, Yuzhe Chen, M.~Kinney, and Benjamin~Van
+  Durme.
+\newblock {FOLIO}: Natural language reasoning with first-order logic.
+\newblock \emph{arXiv preprint arXiv:2209.00840}, 2022.
+\newblock URL \url{https://arxiv.org/abs/2209.00840}.
+
+\bibitem[Moura and Bj{\o}rner(2008)]{DeMoura2008}
+Leonardo~De Moura and Nikolaj Bj{\o}rner.
+\newblock {Z3}: An efficient {SMT} solver.
+\newblock In \emph{Proceedings of the 14th International Conference on Tools
+  and Algorithms for the Construction and Analysis of Systems (TACAS)}, pages
+  337--340, 2008.
+\newblock \doi{10.1007/978-3-540-78800-3_24}.
+
+\bibitem[Olausson et~al.(2023)Olausson, Gu, Lipkin, Zhang, Solar-Lezama,
+  Tenenbaum, and Levy]{Olausson2023}
+Theo~X. Olausson, Alex Gu, Ben Lipkin, Cedengao Zhang, Armando Solar-Lezama,
+  Joshua~B. Tenenbaum, and Roger~P. Levy.
+\newblock {LINC: A Neurosymbolic Approach for Logical Reasoning}.
+\newblock \emph{arXiv preprint arXiv:2306.06164}, 2023.
+\newblock URL \url{https://arxiv.org/abs/2306.06164}.
+
+\bibitem[Ryu et~al.(2025)Ryu, Mayberry, and Clark]{Ryu2025}
+Hyun Ryu, Marshall~R. Mayberry, and Peter Clark.
+\newblock Divide and translate: Compositional first-order logic translation and
+  verification for complex logical reasoning.
+\newblock In \emph{Proceedings of the 2025 International Conference on Learning
+  Representations (ICLR)}, 2025.
+\newblock URL \url{https://arxiv.org/abs/2402.18200}.
+
+\bibitem[Sinha et~al.(2019)Sinha, Sodhani, Dong, Pineau, and
+  Hamilton]{Sinha2019}
+Koustuv Sinha, Shagun Sodhani, Jin Dong, Joelle Pineau, and William~L.
+  Hamilton.
+\newblock {CLUTRR}: A diagnostic dataset for inductive reasoning from text.
+\newblock In \emph{Proceedings of the 2019 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, pages 1171--1179, 2019.
+\newblock \doi{10.18653/v1/D19-1105}.
+
+\bibitem[Stengel-Eskin and Durme(2023)]{StengelEskin2023}
+Elias Stengel-Eskin and Benjamin~Van Durme.
+\newblock Calibrated interpretation: Confidence estimation in semantic parsing.
+\newblock \emph{Transactions of the Association for Computational Linguistics
+  (TACL)}, 11:\penalty0 1681--1696, 2023.
+\newblock \doi{10.1162/tacl_a_00616}.
+
+\bibitem[Wang et~al.(2023)Wang, Wei, Schuurmans, Le, and Zhou]{Wang2023}
+Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc~V. Le, and Denny Zhou.
+\newblock Self-consistency improves chain-of-thought reasoning in language
+  models.
+\newblock In \emph{Proceedings of the 2023 International Conference on Learning
+  Representations (ICLR)}, 2023.
+\newblock URL \url{https://arxiv.org/abs/2203.11171}.
+
+\bibitem[Ye et~al.(2023)Ye, Luo, and Durrett]{Ye2023}
+Xi~Ye, Qiaochu Luo, and Greg Durrett.
+\newblock {SatLM}: Satisfiability-aided language models using declarative
+  prompting.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2023.
+\newblock URL \url{https://arxiv.org/abs/2210.10740}.
+
+\bibitem[Yin and Neubig(2019)]{Yin2019}
+Pengcheng Yin and Graham Neubig.
+\newblock Reranking for neural semantic parsing.
+\newblock In \emph{Proceedings of the 57th Annual Meeting of the Association
+  for Computational Linguistics (ACL)}, pages 4553--4559, 2019.
+\newblock \doi{10.18653/v1/P19-1447}.
+
+\end{thebibliography}

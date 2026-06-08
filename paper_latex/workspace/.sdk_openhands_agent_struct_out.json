@@ -1,0 +1,14 @@
+{
+  "title": "Satisfiability-Guided Top-K Ensemble for Neuro-Symbolic FOL Translation",
+  "summary": "Successfully created a publication-ready LaTeX paper with BibTeX from the provided paper_text and available_figures. The paper includes all required sections (Abstract, Introduction, Related Work, Methods, Experimental Results, Discussion, Conclusion, Acknowledgments, References, and Appendix), all 3 figures (fig1_v0.jpg - System Architecture, fig2_v0.jpg - Accuracy Comparison, fig3_v0.jpg - Novelty Comparison Table), and a complete bibliography (references.bib with 11 entries). The LaTeX source (paper.tex) was compiled to PDF (paper.pdf, 13 pages) using pdflatex and bibtex. Visual review of all 13 pages confirmed proper layout with figures correctly placed at their markers. The paper honestly discusses implementation limitations and achieves modest accuracy (36.7% overall) due to known issues with Z3 integration and LLM translation quality.",
+  "out_expected_files": {
+    "paper_tex_path": "paper.tex",
+    "paper_pdf_path": "paper.pdf",
+    "references_bib_path": "references.bib",
+    "figure_paths": [
+      "figures/fig1_v0.jpg",
+      "figures/fig2_v0.jpg",
+      "figures/fig3_v0.jpg"
+    ]
+  }
+}
