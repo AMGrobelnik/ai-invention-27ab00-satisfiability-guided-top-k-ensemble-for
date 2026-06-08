@@ -1,0 +1,11 @@
+{"ts": 1780875440.4669785, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "LINC neuro-symbolic FOL translation Olausson EMNLP 2023", "count": 10}
+{"ts": 1780875448.808766, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "CLOVER compositional FOL translation verification arXiv 2410.08047", "count": 10}
+{"ts": 1780875470.4883862, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "SatLM SMT solver Z3 LLM reasoning Ye 2023", "count": 10}
+{"ts": 1780875481.4312081, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "Proof of Thought neuro-symbolic reasoning LLM", "count": 9}
+{"ts": 1780875632.7382913, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "neuro-symbolic text to FOL translation 2023 2024 baselines comparison", "count": 10}
+{"ts": 1780875685.4199362, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "Z3 SMT solver Python API tutorial examples", "count": 10}
+{"ts": 1780875721.0734954, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "Z3 decidable first-order logic fragments description logic guarded fragment", "count": 10}
+{"ts": 1780875744.6130087, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "d-DNNF compiler c2d d4 weighted model counting", "count": 10}
+{"ts": 1780875778.9059887, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "PyProbLog probabilistic logic programming weighted model counting", "count": 10}
+{"ts": 1780875833.3566113, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "Probabilistic Soft Logic PSL weighted model counting", "count": 10}
+{"ts": 1780875878.7335432, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "FOLIO dataset first-order logic reasoning baseline results", "count": 10}

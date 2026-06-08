@@ -1,0 +1,11 @@
+{
+  "title": "Satisfiability-Guided Top-K Ensemble for Neuro-Symbolic FOL Translation Experiment",
+  "layman_summary": "Implements a neuro-symbolic pipeline that generates K=10 diverse FOL translations via LLM sampling, filters by Z3 satisfiability, and computes answers via weighted model counting over the filtered ensemble.",
+  "summary": "This experiment artifact implements and evaluates a neuro-symbolic pipeline for text-to-logic translation with three main components: (1) Generate K=10 diverse FOL translations via LLM temperature sampling using OpenRouter API (model: openai/gpt-4o-mini), (2) Filter translations by Z3 satisfiability checking with 5-second timeout, implementing proper FOL-to-Z3 conversion for quantifier-free fragments, (3) Compute answers by querying LLM on each satisfiable theory and aggregating with majority voting (uniform weights). The method is evaluated on three standardized datasets: FOLIO (100 examples with gold-standard FOL), RuleTaker (100 examples with entailment labels), and CLUTRR (100 examples with relation queries). Baseline comparison includes direct LLM answers without neuro-symbolic pipeline. Metrics collected: accuracy (correct_our vs correct_baseline), hallucination rate (fraction of UNSAT theories), ECE (Expected Calibration Error), and cumulative API cost (tracked against $10 USD budget). Output follows exp_gen_sol_out.json schema with metadata including method_name, k, model, total_cost_usd, baselines dict, and per-dataset results with per-example predictions and confidence scores. The artifact includes method.py script, full/mini/preview output JSONs, and pyproject.toml for reproducibility.",
+  "out_expected_files": {
+    "script": "method.py",
+    "full_output": "full_method_out.json",
+    "mini_output": "mini_method_out.json",
+    "preview_output": "preview_method_out.json"
+  }
+}

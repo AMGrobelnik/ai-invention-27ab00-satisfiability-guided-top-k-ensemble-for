@@ -1,0 +1,205 @@
+{
+  "metadata": {
+    "method_name": "sat_guided_topk_ensemble",
+    "k": 10,
+    "model": "openai/gpt-4o-mini",
+    "total_cost_usd": 0.0091
+  },
+  "datasets": [
+    {
+      "dataset": "ruletaker",
+      "examples": [
+        {
+          "input": "Context: Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not sma",
+          "output": "entailment",
+          "predict_our_method": "not entailment",
+          "predict_baseline": "unknown",
+          "metadata_example_id": 0,
+          "metadata_config": "depth-1",
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 0.7,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Context: Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not sma",
+          "output": "not entailment",
+          "predict_our_method": "not entailment",
+          "predict_baseline": "unknown",
+          "metadata_example_id": 1,
+          "metadata_config": "depth-1",
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 0.7,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Context: Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not sma",
+          "output": "entailment",
+          "predict_our_method": "unknown",
+          "predict_baseline": "unknown",
+          "metadata_example_id": 2,
+          "metadata_config": "depth-1",
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 0.5,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        }
+      ]
+    },
+    {
+      "dataset": "folio",
+      "examples": [
+        {
+          "input": "Premises:\nAll people who regularly drink coffee are dependent on caffeine.\nPeople regularly drink coffee, or they don't want to be addicted to caffeine, or both.\nNo one who doesn't want to be addicted",
+          "output": "True",
+          "predict_our_method": "True",
+          "predict_baseline": "True",
+          "metadata_example_id": "folio_train_1126",
+          "metadata_config": null,
+          "metadata_fol_gold": "∀x (DrinkRegularly(x, coffee) → IsDependentOn(x, caffeine))\n∀x (DrinkRegularly(x, coffee)  ∨ (¬WantToBeAddictedTo(x, caffeine)))\n∀x (¬WantToBeAddictedTo(x, caffeine) → ¬AwareThatDrug(x, caffeine))\n¬(Student(rina) ⊕  ¬AwareThatDrug(rina, caffeine))\n¬(IsDependentOn(rina, caffeine) ⊕ Student(rina))\nConclusion: ¬WantToBeAddictedTo(rina, caffeine) ∨ (¬AwareThatDrug(rina, caffeine))",
+          "metadata_split": "train",
+          "correct_our": true,
+          "correct_baseline": true,
+          "confidence": 1.0,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Premises:\nAll people who regularly drink coffee are dependent on caffeine.\nPeople regularly drink coffee, or they don't want to be addicted to caffeine, or both.\nNo one who doesn't want to be addicted",
+          "output": "True",
+          "predict_our_method": "True",
+          "predict_baseline": "True",
+          "metadata_example_id": "folio_train_1127",
+          "metadata_config": null,
+          "metadata_fol_gold": "∀x (DrinkRegularly(x, coffee) → IsDependentOn(x, caffeine))\n∀x (DrinkRegularly(x, coffee)  ∨ (¬WantToBeAddictedTo(x, caffeine)))\n∀x (¬WantToBeAddictedTo(x, caffeine) → ¬AwareThatDrug(x, caffeine))\n¬(Student(rina) ⊕  ¬AwareThatDrug(rina, caffeine))\n¬(IsDependentOn(rina, caffeine) ⊕ Student(rina))\nConclusion: ¬WantToBeAddictedTo(rina, caffeine) ⊕ ¬AwareThatDrug(rina, caffeine)",
+          "metadata_split": "train",
+          "correct_our": true,
+          "correct_baseline": true,
+          "confidence": 1.0,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Premises:\nAll people who regularly drink coffee are dependent on caffeine.\nPeople regularly drink coffee, or they don't want to be addicted to caffeine, or both.\nNo one who doesn't want to be addicted",
+          "output": "False",
+          "predict_our_method": "True",
+          "predict_baseline": "Uncertain",
+          "metadata_example_id": "folio_train_1128",
+          "metadata_config": null,
+          "metadata_fol_gold": "∀x (DrinkRegularly(x, coffee) → IsDependentOn(x, caffeine))\n∀x (DrinkRegularly(x, coffee)  ∨ (¬WantToBeAddictedTo(x, caffeine)))\n∀x (¬WantToBeAddictedTo(x, caffeine) → ¬AwareThatDrug(x, caffeine))\n¬(Student(rina) ⊕  ¬AwareThatDrug(rina, caffeine))\n¬(IsDependentOn(rina, caffeine) ⊕ Student(rina))\nConclusion: DrinkRegularly(rina, coffee)  ⊕ IsUnawareThatCaffeineIsADrug(rina)",
+          "metadata_split": "train",
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 1.0,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        }
+      ]
+    },
+    {
+      "dataset": "clutrr",
+      "examples": [
+        {
+          "input": "Story:\n[Clarence]'s granddaughter, [Emily], was busy helping her brother, [Michael], move to college.\nQuery: ('Clarence', 'Michael')",
+          "output": "grandson",
+          "predict_our_method": "unrelated",
+          "predict_baseline": "unrelated",
+          "metadata_example_id": "511be16e-05ba-4d6a-b258-ef2201d6757a",
+          "metadata_config": null,
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 1.0,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Story:\n[Emily] and her granddaughter [Ashley] went to the mall [Michael] likes to visit his sister. Her name is [Emily].\nQuery: ('Ashley', 'Michael')",
+          "output": "grandson",
+          "predict_our_method": "unrelated",
+          "predict_baseline": "unrelated",
+          "metadata_example_id": "0f226f4d-dc2d-4051-a875-9e555ecf0f22",
+          "metadata_config": null,
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 0.7,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Story:\n[Tony] and his sister, [June], went to a sneak preview of the Avengers movie and loved it. [Clarence] has 3 children, and one grandson. The Grandsons name is [Tony]\nQuery: ('Clarence', 'June')",
+          "output": "granddaughter",
+          "predict_our_method": "unrelated",
+          "predict_baseline": "unrelated",
+          "metadata_example_id": "946e19f0-a149-4317-9ea9-053788662090",
+          "metadata_config": null,
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 1.0,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        }
+      ]
+    }
+  ]
+}

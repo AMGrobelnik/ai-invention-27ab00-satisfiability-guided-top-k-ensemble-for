@@ -1,0 +1,17 @@
+{
+  "title": "Neuro-Symbolic FOL Translation Evaluation Datasets: RuleTaker, FOLIO, CLUTRR",
+  "layman_summary": "Prepared three standardized datasets (RuleTaker, FOLIO, CLUTRR) containing natural language premises and queries for evaluating neuro-symbolic reasoning systems that translate text into first-order logic.",
+  "summary": "This artifact provides three standardized datasets for evaluating neuro-symbolic FOL translation pipelines: (1) RuleTaker (50,000 examples) - near-propositional fragment with rule-based reasoning and entailment/not-entailment labels; (2) FOLIO (1,001 examples) - natural language premises with gold-standard FOL annotations for evaluating translation quality, with train/val/test splits; (3) CLUTRR (5,000 examples) - multi-hop kinship reasoning stories with relation queries. All datasets are standardized to the exp_sel_data_out.json schema with fields: input (string), output (string), and metadata_* fields (metadata_config, metadata_fol_gold, metadata_split, metadata_example_id). The data.py script loads raw JSON files from temp/datasets/, standardizes them to the required schema, and outputs full_data_out.json. Mini (9 examples, 3 per dataset) and preview (9 examples with truncated strings) versions are also generated for development. Validation against the exp_sel_data_out.json schema passes. Total: 56,001 examples across 3 datasets, serialized to 29.85 MB JSON.",
+  "out_expected_files": {
+    "script": "data.py",
+    "datasets": [
+      {
+        "full": [
+          "full_data_out.json"
+        ],
+        "mini": "mini_data_out.json",
+        "preview": "preview_data_out.json"
+      }
+    ]
+  }
+}

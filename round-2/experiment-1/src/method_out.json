@@ -1,0 +1,641 @@
+{
+  "metadata": {
+    "method_name": "sat_guided_topk_ensemble",
+    "k": 10,
+    "model": "openai/gpt-4o-mini",
+    "total_cost_usd": 0.0289,
+    "baselines": {
+      "folio": {
+        "LINC_GPT4": 0.725,
+        "CLOVER": 0.788,
+        "SatLM": 0.694
+      },
+      "ruletaker": {
+        "LINC_GPT4": 0.983,
+        "CLOVER": 0.967,
+        "SatLM": 0.997
+      },
+      "clutrr": {
+        "SatLM": 0.801,
+        "CLOVER": 0.788
+      }
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "ruletaker",
+      "examples": [
+        {
+          "input": "Context: Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not sma",
+          "output": "entailment",
+          "predict_our_method": "not entailment",
+          "predict_baseline": "not entailment",
+          "metadata_example_id": 0,
+          "metadata_config": "depth-1",
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 1.0,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Context: Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not sma",
+          "output": "not entailment",
+          "predict_our_method": "not entailment",
+          "predict_baseline": "not entailment",
+          "metadata_example_id": 1,
+          "metadata_config": "depth-1",
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": true,
+          "correct_baseline": true,
+          "confidence": 1.0,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Context: Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not sma",
+          "output": "entailment",
+          "predict_our_method": "not entailment",
+          "predict_baseline": "not entailment",
+          "metadata_example_id": 2,
+          "metadata_config": "depth-1",
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 1.0,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Context: Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not sma",
+          "output": "not entailment",
+          "predict_our_method": "not entailment",
+          "predict_baseline": "not entailment",
+          "metadata_example_id": 3,
+          "metadata_config": "depth-1",
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": true,
+          "correct_baseline": true,
+          "confidence": 1.0,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Context: Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not sma",
+          "output": "entailment",
+          "predict_our_method": "not entailment",
+          "predict_baseline": "not entailment",
+          "metadata_example_id": 4,
+          "metadata_config": "depth-1",
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 1.0,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Context: Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not sma",
+          "output": "not entailment",
+          "predict_our_method": "not entailment",
+          "predict_baseline": "not entailment",
+          "metadata_example_id": 5,
+          "metadata_config": "depth-1",
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": true,
+          "correct_baseline": true,
+          "confidence": 1.0,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Context: Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not sma",
+          "output": "entailment",
+          "predict_our_method": "not entailment",
+          "predict_baseline": "not entailment",
+          "metadata_example_id": 6,
+          "metadata_config": "depth-1",
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 1.0,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Context: Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not sma",
+          "output": "not entailment",
+          "predict_our_method": "not entailment",
+          "predict_baseline": "not entailment",
+          "metadata_example_id": 7,
+          "metadata_config": "depth-1",
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": true,
+          "correct_baseline": true,
+          "confidence": 1.0,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Context: Fiona is white. If someone is big and not rough then they are not green. If someone is white then they are not big. If someone is not big then they are not young. If someone is smart and not ",
+          "output": "entailment",
+          "predict_our_method": "not entailment",
+          "predict_baseline": "not entailment",
+          "metadata_example_id": 8,
+          "metadata_config": "depth-1",
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 1.0,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Context: Fiona is white. If someone is big and not rough then they are not green. If someone is white then they are not big. If someone is not big then they are not young. If someone is smart and not ",
+          "output": "not entailment",
+          "predict_our_method": "not entailment",
+          "predict_baseline": "not entailment",
+          "metadata_example_id": 9,
+          "metadata_config": "depth-1",
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": true,
+          "correct_baseline": true,
+          "confidence": 1.0,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        }
+      ]
+    },
+    {
+      "dataset": "folio",
+      "examples": [
+        {
+          "input": "Premises:\nAll people who regularly drink coffee are dependent on caffeine.\nPeople regularly drink coffee, or they don't want to be addicted to caffeine, or both.\nNo one who doesn't want to be addicted",
+          "output": "True",
+          "predict_our_method": "Uncertain",
+          "predict_baseline": "True",
+          "metadata_example_id": "folio_train_1126",
+          "metadata_config": null,
+          "metadata_fol_gold": "∀x (DrinkRegularly(x, coffee) → IsDependentOn(x, caffeine))\n∀x (DrinkRegularly(x, coffee)  ∨ (¬WantToBeAddictedTo(x, caffeine)))\n∀x (¬WantToBeAddictedTo(x, caffeine) → ¬AwareThatDrug(x, caffeine))\n¬(Student(rina) ⊕  ¬AwareThatDrug(rina, caffeine))\n¬(IsDependentOn(rina, caffeine) ⊕ Student(rina))\nConclusion: ¬WantToBeAddictedTo(rina, caffeine) ∨ (¬AwareThatDrug(rina, caffeine))",
+          "metadata_split": "train",
+          "correct_our": false,
+          "correct_baseline": true,
+          "confidence": 0.7,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Premises:\nAll people who regularly drink coffee are dependent on caffeine.\nPeople regularly drink coffee, or they don't want to be addicted to caffeine, or both.\nNo one who doesn't want to be addicted",
+          "output": "True",
+          "predict_our_method": "Uncertain",
+          "predict_baseline": "True",
+          "metadata_example_id": "folio_train_1127",
+          "metadata_config": null,
+          "metadata_fol_gold": "∀x (DrinkRegularly(x, coffee) → IsDependentOn(x, caffeine))\n∀x (DrinkRegularly(x, coffee)  ∨ (¬WantToBeAddictedTo(x, caffeine)))\n∀x (¬WantToBeAddictedTo(x, caffeine) → ¬AwareThatDrug(x, caffeine))\n¬(Student(rina) ⊕  ¬AwareThatDrug(rina, caffeine))\n¬(IsDependentOn(rina, caffeine) ⊕ Student(rina))\nConclusion: ¬WantToBeAddictedTo(rina, caffeine) ⊕ ¬AwareThatDrug(rina, caffeine)",
+          "metadata_split": "train",
+          "correct_our": false,
+          "correct_baseline": true,
+          "confidence": 0.5,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Premises:\nAll people who regularly drink coffee are dependent on caffeine.\nPeople regularly drink coffee, or they don't want to be addicted to caffeine, or both.\nNo one who doesn't want to be addicted",
+          "output": "False",
+          "predict_our_method": "True",
+          "predict_baseline": "True",
+          "metadata_example_id": "folio_train_1128",
+          "metadata_config": null,
+          "metadata_fol_gold": "∀x (DrinkRegularly(x, coffee) → IsDependentOn(x, caffeine))\n∀x (DrinkRegularly(x, coffee)  ∨ (¬WantToBeAddictedTo(x, caffeine)))\n∀x (¬WantToBeAddictedTo(x, caffeine) → ¬AwareThatDrug(x, caffeine))\n¬(Student(rina) ⊕  ¬AwareThatDrug(rina, caffeine))\n¬(IsDependentOn(rina, caffeine) ⊕ Student(rina))\nConclusion: DrinkRegularly(rina, coffee)  ⊕ IsUnawareThatCaffeineIsADrug(rina)",
+          "metadata_split": "train",
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 1.0,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Premises:\nAll people who regularly drink coffee are dependent on caffeine.\nPeople regularly drink coffee, or they don't want to be addicted to caffeine, or both.\nNo one who doesn't want to be addicted",
+          "output": "True",
+          "predict_our_method": "Uncertain",
+          "predict_baseline": "Uncertain",
+          "metadata_example_id": "folio_train_1129",
+          "metadata_config": null,
+          "metadata_fol_gold": "∀x (DrinkRegularly(x, coffee) → IsDependentOn(x, caffeine))\n∀x (DrinkRegularly(x, coffee)  ∨ (¬WantToBeAddictedTo(x, caffeine)))\n∀x (¬WantToBeAddictedTo(x, caffeine) → ¬AwareThatDrug(x, caffeine))\n¬(Student(rina) ⊕  ¬AwareThatDrug(rina, caffeine))\n¬(IsDependentOn(rina, caffeine) ⊕ Student(rina))\nConclusion: (DoNotWantToBeAddictedToCaffeine(rina) ⊕ ¬AwareThatDrug(rina, caffeine)) → ¬(¬WantToBeAddictedTo(rina, caffeine) ∧ DrinkRegularly(rina, coffee))",
+          "metadata_split": "train",
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 1.0,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Premises:\nMiroslav Venhoda was a Czech choral conductor who specialized in the performance of Renaissance and Baroque music.\nAny choral conductor is a musician.\nSome musicians love music.\nMiroslav Ven",
+          "output": "Uncertain",
+          "predict_our_method": "True",
+          "predict_baseline": "Uncertain",
+          "metadata_example_id": "folio_train_20",
+          "metadata_config": null,
+          "metadata_fol_gold": "Czech(miroslav) ∧ ChoralConductor(miroslav) ∧ SpecializeInPerformanceOf(miroslav, renaissanceMusic) ∧ SpecializeInPerformanceOf(miroslav, baroqueMusic)\n∀x (ChoralConductor(x) → Musician(x))\n∃x ∃y ((Musician(x) → Love(x, music)) ∧ (¬(x=y) ∧ Musician(y) → Love(y, music)))\nPublishedBook(miroslav, methodOfStudyingGregorianChant, yr1946)\nConclusion: Love(miroslav, music)",
+          "metadata_split": "train",
+          "correct_our": false,
+          "correct_baseline": true,
+          "confidence": 0.9,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Premises:\nMiroslav Venhoda was a Czech choral conductor who specialized in the performance of Renaissance and Baroque music.\nAny choral conductor is a musician.\nSome musicians love music.\nMiroslav Ven",
+          "output": "True",
+          "predict_our_method": "True",
+          "predict_baseline": "True",
+          "metadata_example_id": "folio_train_21",
+          "metadata_config": null,
+          "metadata_fol_gold": "Czech(miroslav) ∧ ChoralConductor(miroslav) ∧ SpecializeInPerformanceOf(miroslav, renaissanceMusic) ∧ SpecializeInPerformanceOf(miroslav, baroqueMusic)\n∀x (ChoralConductor(x) → Musician(x))\n∃x ∃y ((Musician(x) → Love(x, music)) ∧ (¬(x=y) ∧ Musician(y) → Love(y, music)))\nPublishedBook(miroslav, methodOfStudyingGregorianChant, yr1946)\nConclusion: ∃x ∃y (Czech(x) ∧ PublishedBook(x, y, year1946))",
+          "metadata_split": "train",
+          "correct_our": true,
+          "correct_baseline": true,
+          "confidence": 0.6,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Premises:\nMiroslav Venhoda was a Czech choral conductor who specialized in the performance of Renaissance and Baroque music.\nAny choral conductor is a musician.\nSome musicians love music.\nMiroslav Ven",
+          "output": "False",
+          "predict_our_method": "False",
+          "predict_baseline": "False",
+          "metadata_example_id": "folio_train_22",
+          "metadata_config": null,
+          "metadata_fol_gold": "Czech(miroslav) ∧ ChoralConductor(miroslav) ∧ SpecializeInPerformanceOf(miroslav, renaissanceMusic) ∧ SpecializeInPerformanceOf(miroslav, baroqueMusic)\n∀x (ChoralConductor(x) → Musician(x))\n∃x ∃y ((Musician(x) → Love(x, music)) ∧ (¬(x=y) ∧ Musician(y) → Love(y, music)))\nPublishedBook(miroslav, methodOfStudyingGregorianChant, yr1946)\nConclusion: ∀x (ChoralConductor(x) → ¬SpecializeInPerformanceOf(x, renaissanceMusic))",
+          "metadata_split": "train",
+          "correct_our": true,
+          "correct_baseline": true,
+          "confidence": 0.6,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Premises:\nAll eels are fish. \nNo fish are plants. \nEverything displayed in the collection is either a plant or an animal.\nAll multicellular animals are not bacteria.\nAll animals displayed in the colle",
+          "output": "Uncertain",
+          "predict_our_method": "True",
+          "predict_baseline": "True",
+          "metadata_example_id": "folio_train_1336",
+          "metadata_config": null,
+          "metadata_fol_gold": "∀x (Eel(x) → Fish(x))\n∀x (Fish(x) → ¬Plant(x))\n∀x (DisplayedIn(x, collection) → Plant(x) ⊕ Animal(x))\n∀x (Multicellular(x) → ¬Bacteria(x))\n∀x (DisplayedIn(x, collection) ∧ Animal(x) → Multicellular(x))\nDisplayedIn(seaEel, collection)\nEel(seaEel) ∨ Animal(seaEel) ∨ ¬Plant(seaEel)\nConclusion: Eel(seaEel)",
+          "metadata_split": "train",
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 0.8,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Premises:\nAll eels are fish. \nNo fish are plants. \nEverything displayed in the collection is either a plant or an animal.\nAll multicellular animals are not bacteria.\nAll animals displayed in the colle",
+          "output": "False",
+          "predict_our_method": "False",
+          "predict_baseline": "False",
+          "metadata_example_id": "folio_train_1337",
+          "metadata_config": null,
+          "metadata_fol_gold": "∀x (Eel(x) → Fish(x))\n∀x (Fish(x) → ¬Plant(x))\n∀x (DisplayedIn(x, collection) → Plant(x) ⊕ Animal(x))\n∀x (Multicellular(x) → ¬Bacteria(x))\n∀x (DisplayedIn(x, collection) ∧ Animal(x) → Multicellular(x))\nDisplayedIn(seaEel, collection)\nEel(seaEel) ∨ Animal(seaEel) ∨ ¬Plant(seaEel)\nConclusion: Bacteria(seaEel)",
+          "metadata_split": "train",
+          "correct_our": true,
+          "correct_baseline": true,
+          "confidence": 0.9,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Premises:\nAll eels are fish. \nNo fish are plants. \nEverything displayed in the collection is either a plant or an animal.\nAll multicellular animals are not bacteria.\nAll animals displayed in the colle",
+          "output": "True",
+          "predict_our_method": "True",
+          "predict_baseline": "Uncertain",
+          "metadata_example_id": "folio_train_1338",
+          "metadata_config": null,
+          "metadata_fol_gold": "∀x (Eel(x) → Fish(x))\n∀x (Fish(x) → ¬Plant(x))\n∀x (DisplayedIn(x, collection) → Plant(x) ⊕ Animal(x))\n∀x (Multicellular(x) → ¬Bacteria(x))\n∀x (DisplayedIn(x, collection) ∧ Animal(x) → Multicellular(x))\nDisplayedIn(seaEel, collection)\nEel(seaEel) ∨ Animal(seaEel) ∨ ¬Plant(seaEel)\nConclusion: Multicellular(seaEel) ∨ Bacteria(seaEel)",
+          "metadata_split": "train",
+          "correct_our": true,
+          "correct_baseline": false,
+          "confidence": 0.9,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        }
+      ]
+    },
+    {
+      "dataset": "clutrr",
+      "examples": [
+        {
+          "input": "Story:\n[Clarence]'s granddaughter, [Emily], was busy helping her brother, [Michael], move to college.\nQuery: ('Clarence', 'Michael')",
+          "output": "grandson",
+          "predict_our_method": "granddaughter",
+          "predict_baseline": "clarence is michael's grandfat",
+          "metadata_example_id": "511be16e-05ba-4d6a-b258-ef2201d6757a",
+          "metadata_config": null,
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 0.9,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Story:\n[Emily] and her granddaughter [Ashley] went to the mall [Michael] likes to visit his sister. Her name is [Emily].\nQuery: ('Ashley', 'Michael')",
+          "output": "grandson",
+          "predict_our_method": "grandmother",
+          "predict_baseline": "no relationship",
+          "metadata_example_id": "0f226f4d-dc2d-4051-a875-9e555ecf0f22",
+          "metadata_config": null,
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 0.4,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Story:\n[Tony] and his sister, [June], went to a sneak preview of the Avengers movie and loved it. [Clarence] has 3 children, and one grandson. The Grandsons name is [Tony]\nQuery: ('Clarence', 'June')",
+          "output": "granddaughter",
+          "predict_our_method": "grandson",
+          "predict_baseline": "no relationship",
+          "metadata_example_id": "946e19f0-a149-4317-9ea9-053788662090",
+          "metadata_config": null,
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 1.0,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Story:\n[Glen] is [Emily]'s brand new Baby brother. [Clarence] was excited to have a new Grandchild beside [Emily]\nQuery: ('Clarence', 'Glen')",
+          "output": "grandson",
+          "predict_our_method": "grandson",
+          "predict_baseline": "clarence is glen's grandparent",
+          "metadata_example_id": "329c0307-707e-4483-97d3-425b7dde32bb",
+          "metadata_config": null,
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": true,
+          "correct_baseline": false,
+          "confidence": 0.7,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Story:\n[June] and [Nicolas] are siblings who are enjoying lunch together. [Clarence] bought a train set for his grandson [Nicolas].\nQuery: ('Clarence', 'June')",
+          "output": "granddaughter",
+          "predict_our_method": "sibling",
+          "predict_baseline": "no relationship",
+          "metadata_example_id": "262a6aaa-2561-4310-a9f0-f97d5aa4950d",
+          "metadata_config": null,
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 0.7,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Story:\n[Clarence] went to the museum with his grandson [Jeff]. [Jeff] and [Louise] asked their mother, if they could go play in the pool.\nQuery: ('Clarence', 'Louise')",
+          "output": "granddaughter",
+          "predict_our_method": "grandson",
+          "predict_baseline": "no",
+          "metadata_example_id": "55fc99eb-1440-4247-b53d-96540206ce2f",
+          "metadata_config": null,
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 0.5,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Story:\n[Emily]'s grandfather [Clarence] recently passed away. She is taking a leave of absence. [Emily] went to her brother [Glen]'s birthday party\nQuery: ('Clarence', 'Glen')",
+          "output": "grandson",
+          "predict_our_method": "unrelated",
+          "predict_baseline": "clarence is glen's grandfather",
+          "metadata_example_id": "3dfca4ba-f6e5-449c-8a24-739e7c746559",
+          "metadata_config": null,
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 0.7,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Story:\n[Tony] woke up on his 7th birthday to a surprise present sitting on his night stand. It was from his Grandma [Ashley], and [Tony]'s sister [Charlotte] looked on excitedly as he opened his prese",
+          "output": "granddaughter",
+          "predict_our_method": "unrelated",
+          "predict_baseline": "ashley is tony's grandma and c",
+          "metadata_example_id": "16b898d1-a77e-4e05-86d6-b6e614b030ab",
+          "metadata_config": null,
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 0.4,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Story:\n[Clarence] enjoys picking flowers with his son's daughter. Her name is [Mary]. [Mary] and her brother [Michael] went to see a movie.\nQuery: ('Clarence', 'Michael')",
+          "output": "grandson",
+          "predict_our_method": "grandson",
+          "predict_baseline": "clarence is michael's grandfat",
+          "metadata_example_id": "83b85772-1dda-47c2-9c87-072dd21d642b",
+          "metadata_config": null,
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": true,
+          "correct_baseline": false,
+          "confidence": 0.4,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        },
+        {
+          "input": "Story:\n[Ashley] and her grandson [Dennis] went to the store to buy a birthday present for [Dennis]'s sister [Jennifer].\nQuery: ('Ashley', 'Jennifer')",
+          "output": "granddaughter",
+          "predict_our_method": "grandmother",
+          "predict_baseline": "ashley is jennifer's grandmoth",
+          "metadata_example_id": "42903104-bdf8-40cb-a148-82fd2109d223",
+          "metadata_config": null,
+          "metadata_fol_gold": null,
+          "metadata_split": null,
+          "correct_our": false,
+          "correct_baseline": false,
+          "confidence": 0.2,
+          "sat_stats": {
+            "sat": 10,
+            "unsat": 0,
+            "unknown": 0,
+            "error": 0
+          },
+          "num_filtered": 10
+        }
+      ]
+    }
+  ]
+}
