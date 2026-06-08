@@ -1,0 +1,27 @@
+{
+  "datasets": [
+    {
+      "dataset": "ruletaker",
+      "examples": [
+        {
+          "input": "Context: Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not smart.\nQuestion: Is Anne smart?",
+          "output": "not entailment",
+          "metadata_config": "depth-1",
+          "metadata_example_id": 0
+        },
+        {
+          "input": "Context: Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not smart.\nQuestion: Is Bob smart?",
+          "output": "not entailment",
+          "metadata_config": "depth-1",
+          "metadata_example_id": 1
+        },
+        {
+          "input": "Context: Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not smart.\nQuestion: Is Dave smart?",
+          "output": "entailment",
+          "metadata_config": "depth-1",
+          "metadata_example_id": 2
+        }
+      ]
+    }
+  ]
+}

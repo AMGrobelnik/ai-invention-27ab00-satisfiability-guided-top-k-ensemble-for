@@ -1,0 +1,15 @@
+{
+  "kind": "code_demo",
+  "id": "gen_art_experiment_1",
+  "type": "code",
+  "iteration": 2,
+  "title": "Satisfiability-Guided Top-K Ensemble for Neuro-Symbolic FOL Translation Experiment",
+  "summary": "This experiment artifact implements and evaluates a neuro-symbolic pipeline for text-to-logic translation with three main components: (1) Generate K=10 diverse FOL translations via LLM temperature sampling using OpenRouter API (model: openai/gpt-4o-mini), (2) Filter translations by Z3 satisfiability checking with 5-second timeout, implementing proper FOL-to-Z3 conversion for quantifier-free fragments, (3) Compute answers by querying LLM on each satisfiable theory and aggregating with majority voting (uniform weights). The method is evaluated on three standardized datasets: FOLIO (100 examples with gold-standard FOL), RuleTaker (100 examples with entailment labels), and CLUTRR (100 examples with relation queries). Baseline comparison includes direct LLM answers without neuro-symbolic pipeline. Metrics collected: accuracy (correct_our vs correct_baseline), hallucination rate (fraction of UNSAT theories), ECE (Expected Calibration Error), and cumulative API cost (tracked against $10 USD budget). Output follows exp_gen_sol_out.json schema with metadata including method_name, k, model, total_cost_usd, baselines dict, and per-dataset results with per-example predictions and confidence scores. The artifact includes method.py script, full/mini/preview output JSONs, and pyproject.toml for reproducibility.",
+  "original_path": "/home/adrian/projects/ai-inventor/aii_data/users/admin/runs/run_Vh8gS7VoXSfi/3_invention_loop/iter_2/gen_art/gen_art_experiment_1",
+  "demo_path": "/home/adrian/projects/ai-inventor/aii_data/users/admin/runs/run_Vh8gS7VoXSfi/4_gen_paper_repo/_3_gen_art_demo/iter_2/gen_art_experiment_1",
+  "out_expected_files": {
+    "notebook": "",
+    "mini_data_file": ""
+  },
+  "notebook_path": "/home/adrian/projects/ai-inventor/aii_data/users/admin/runs/run_Vh8gS7VoXSfi/4_gen_paper_repo/_3_gen_art_demo/iter_2/gen_art_experiment_1/method_code_demo.ipynb"
+}

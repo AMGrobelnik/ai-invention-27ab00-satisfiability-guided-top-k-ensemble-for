@@ -1,0 +1,15 @@
+{
+  "kind": "code_demo",
+  "id": "gen_art_dataset_1",
+  "type": "code",
+  "iteration": 1,
+  "title": "Neuro-Symbolic FOL Translation Evaluation Datasets: RuleTaker, FOLIO, CLUTRR",
+  "summary": "This artifact provides three standardized datasets for evaluating neuro-symbolic FOL translation pipelines: (1) RuleTaker (50,000 examples) - near-propositional fragment with rule-based reasoning and entailment/not-entailment labels; (2) FOLIO (1,001 examples) - natural language premises with gold-standard FOL annotations for evaluating translation quality, with train/val/test splits; (3) CLUTRR (5,000 examples) - multi-hop kinship reasoning stories with relation queries. All datasets are standardized to the exp_sel_data_out.json schema with fields: input (string), output (string), and metadata_* fields (metadata_config, metadata_fol_gold, metadata_split, metadata_example_id). The data.py script loads raw JSON files from temp/datasets/, standardizes them to the required schema, and outputs full_data_out.json. Mini (9 examples, 3 per dataset) and preview (9 examples with truncated strings) versions are also generated for development. Validation against the exp_sel_data_out.json schema passes. Total: 56,001 examples across 3 datasets, serialized to 29.85 MB JSON.",
+  "original_path": "/home/adrian/projects/ai-inventor/aii_data/users/admin/runs/run_Vh8gS7VoXSfi/3_invention_loop/iter_1/gen_art/gen_art_dataset_1",
+  "demo_path": "/home/adrian/projects/ai-inventor/aii_data/users/admin/runs/run_Vh8gS7VoXSfi/4_gen_paper_repo/_3_gen_art_demo/iter_1/gen_art_dataset_1",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/home/adrian/projects/ai-inventor/aii_data/users/admin/runs/run_Vh8gS7VoXSfi/4_gen_paper_repo/_3_gen_art_demo/iter_1/gen_art_dataset_1/data_code_demo.ipynb"
+}
